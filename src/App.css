@@ -13,21 +13,105 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+ul{
+list-style: none;
+padding: 0;
+}
+a{
+  text-decoration: none;
   color: white;
+  display: block;
+  user-select: none;
+  padding: 20px;
+}
+li{
+  border-bottom: 1px solid #fff;
+  height: 100%;
+}
+li.active, li:hover{
+  background-color: #666;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  height: 100%;
+  display: flex;
+}
+.side_bar{
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  background-color: #191718;
+}
+.home{
+  width: 80%;
+  margin-left: 20%;
+}
+.home-content{
+  margin: 0 5%;
+}
+.content-top {
+  background-color: #efefef;
+  margin-top:10px ;
+  padding: 20px;
+}
+.content-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content-bottom-item{
+  width: 30%;
+}
+.content-bottom-item img{
+ float: left;
+ width: 100px;
+ height: 100px;
+}
+.content-bottom-item p {
+  text-align: justify;
+}
+footer{
+  text-align: left;
+  border-top: 1px solid #444;
 }
 
+@media screen and (max-width: 992px) {
+ 
+}
+
+/* When a screen is 600px or smaller, the background color will be blue */
+@media screen and (max-width: 600px) {
+  .home {
+      width: 100%;
+      margin: 0;
+    }
+  .content-bottom-item {
+    width: 100%;
+  }
+  .side_bar{
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .side_bar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .side_bar ul li {
+    border: none;
+    padding: 0;
+  }
+  .side_bar ul li  a {
+    padding:5px
+  };
+  
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
